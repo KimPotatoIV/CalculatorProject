@@ -23,6 +23,44 @@ func _ready() -> void:
 	_update_display()	# 숫자 표시 업데이트
 
 ##################################################
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_number_0"):
+		_on_button_pressed("Button0")
+	elif Input.is_action_just_pressed("ui_number_1"):
+		_on_button_pressed("Button1")
+	elif Input.is_action_just_pressed("ui_number_2"):
+		_on_button_pressed("Button2")
+	elif Input.is_action_just_pressed("ui_number_3"):
+		_on_button_pressed("Button3")
+	elif Input.is_action_just_pressed("ui_number_4"):
+		_on_button_pressed("Button4")
+	elif Input.is_action_just_pressed("ui_number_5"):
+		_on_button_pressed("Button5")
+	elif Input.is_action_just_pressed("ui_number_6"):
+		_on_button_pressed("Button6")
+	elif Input.is_action_just_pressed("ui_number_7"):
+		_on_button_pressed("Button7")
+	elif Input.is_action_just_pressed("ui_number_8"):
+		_on_button_pressed("Button8")
+	elif Input.is_action_just_pressed("ui_number_9"):
+		_on_button_pressed("Button9")
+	elif Input.is_action_just_pressed("ui_point"):
+		_on_button_pressed("ButtonPoint")
+	elif Input.is_action_just_pressed("ui_plus"):
+		_on_button_pressed("ButtonPlus")
+	elif Input.is_action_just_pressed("ui_minus"):
+		_on_button_pressed("ButtonMinus")
+	elif Input.is_action_just_pressed("ui_multiplication"):
+		_on_button_pressed("ButtonMultiplication")
+	elif Input.is_action_just_pressed("ui_division"):
+		_on_button_pressed("ButtonDivision")
+	elif Input.is_action_just_pressed("ui_accept"):
+		_on_button_pressed("ButtonEquivalent")
+	elif Input.is_action_just_pressed("ui_cancel"):
+		_on_button_pressed("ButtonAC")
+	# 각 키가 눌렸는지 체크하고 해당 버튼 함수 호출
+
+##################################################
 func _on_button_pressed(button_value: String) -> void:
 # 버튼의 이름을 인자로 받음
 	match button_value:
